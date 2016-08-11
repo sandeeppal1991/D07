@@ -5,12 +5,8 @@
 #  - Do not put anything but pass in main()
 ##############################################################
 #Body
-def is_sorted(word1, word2):
-    converted_list_word_1 = list(word1)
-    converted_list_word_2 = list(word2)
-    sorted_list_word_1 = sorted(converted_list_word_1, reverse = False)
-    sorted_list_word_2 = sorted(converted_list_word_2, reverse = False)
-    if(sorted_list_word_1 == sorted_list_word_2):
+def is_sorted(list_of_words):
+    if(list_of_words == sorted(list_of_words, reverse = False)):
         return True
     else:
         return False
@@ -18,9 +14,17 @@ def is_sorted(word1, word2):
 ##############################################################
 
 def main():
-    lst1 = "rat"
-    lst2 = "tar"
-    print(is_sorted(lst1,lst2))
-    pass
+    list_1 = ['apple', 'bear', 'cat']
+    list_2 = ['apple', 'bear', 'apples']
+    list_3 = [1,2,3]
+    list_4 = [1,45,3]
+    list_5 = ['APPLE', 'BEAR', 'APPLES']
+    list_6 = ['APPLE', 'BEAR', 'CAT']
+    print (is_sorted(list_1))  # True
+    print (is_sorted(list_2))  # False
+    print (is_sorted(list_3))  # True
+    print (is_sorted(list_4))  # False
+    print (is_sorted(list_5))  # False
+    print (is_sorted(list_6))  # True
 if __name__ == '__main__':
     main()
